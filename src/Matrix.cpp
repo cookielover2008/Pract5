@@ -7,7 +7,7 @@ Matrix::Matrix() {
     m = 0;
 }
 
-bool Matrix::readData() {
+bool Matrix::enterData() {
     cout << "Введите количество строк и столбцов (от 1 до 100): ";
 
     if (!(cin >> n >> m) ||
@@ -24,6 +24,7 @@ bool Matrix::readData() {
         for (int j = 0; j < m; j++) {
             if (!(cin >> a[i][j])) {
     cout << "Ошибка: элементы матрицы должны быть числами.\n";
+                
     return false;
 };
         }
@@ -55,7 +56,7 @@ double Matrix::calculate(bool &hasSelectedColumns) const {
             }
         }
     }
-
+    
     return total;
 }
 
