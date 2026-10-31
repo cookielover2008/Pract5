@@ -3,7 +3,7 @@
 int main() {
     Matrix processor;
 
-    if (!processor.readData()) {
+    if (!processor.enterData()) {
         return 1;
     }
 
